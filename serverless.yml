@@ -1,6 +1,6 @@
 org: bencoderus
-app: aws-node-express-api-project
-service: aws-node-express-api-project
+app: rate-serverless
+service: rate-service
 frameworkVersion: '3'
 
 provider:
