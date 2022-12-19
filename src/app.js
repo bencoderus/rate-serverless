@@ -18,8 +18,6 @@ app.get("/rates", async (req, res, next) => {
 
     return okResponse(res, "Rate retrieved successfully.", rates);
   } catch (error) {
-    console.log(error);
-
     return serverErrorResponse(res, "Unable to retrieve rate.", {
       message: error.stack,
     });
