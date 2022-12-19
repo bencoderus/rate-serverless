@@ -1,15 +1,11 @@
-const axios = require("axios");
 const { SUPPORTED_CURRENCIES } = require("../constant");
+const axios = require('axios');
 
 const BINANCE_URL = "https://www.binance.com/api/v3/ticker/24hr";
 const BINANCE_CURRENCY_PREPEND = "USDT";
 const TETHER_CURRENCY_PAIR = "BUSDUSDT";
 
 module.exports = {
-  buildCurrencyPair(currency) {
-    return `${currency}${BINANCE_CURRENCY_PREPEND}`;
-  },
-
   async getRates() {
     const rates = await this.getBinanceRate();
 

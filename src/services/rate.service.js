@@ -2,16 +2,14 @@ const binance = require("../clients/binance.client");
 const { SUPPORTED_CURRENCIES } = require("../constant");
 
 module.exports = {
-  async verifySupportedCurrencies(currency) {
+   verifySupportedCurrencies(currency) {
     if (!SUPPORTED_CURRENCIES.includes(currency)) {
       throw new Error("Currency is not supported");
     }
   },
 
   async getRates() {
-    const rates = await binance.getRates();
-
-    return rates;
+    return await binance.getRates();
   },
 
   async getRate(currency) {
