@@ -1,7 +1,8 @@
 {
-  "name": "aws-node-express-api-project",
+  "name": "rate-serverless",
   "version": "1.0.0",
-  "description": "",
+  "license": "MIT",
+  "description": "Building a serverless rate service with AWS Lambda and API gateway.",
   "dependencies": {
     "axios": "^1.2.1",
     "express": "^4.17.1",
@@ -10,9 +11,13 @@
   },
   "scripts": {
     "start": "serverless offline start",
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "test": "jest"
   },
   "devDependencies": {
-    "serverless-offline": "^12.0.3"
+    "@types/jest": "^29.2.5",
+    "jest": "^29.3.1",
+    "serverless-offline": "^12.0.3",
+    "supertest": "^6.3.3"
   }
 }
