@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "serverless offline start",
-    "deploy": "serverless deploy",
+    "deploy": "yarn test && serverless deploy",
     "test": "jest"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 org: bencoderus
 app: rate-serverless
 service: rate-service
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
@@ -11,8 +11,9 @@ provider:
 functions:
   api:
     handler: src/handler.handler
+    timeout: 120
     events:
-      - httpApi: '*'
+      - httpApi: "*"
 
 plugins:
   - serverless-offline
