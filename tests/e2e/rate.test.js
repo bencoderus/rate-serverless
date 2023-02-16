@@ -198,8 +198,8 @@ test("Rates endpoint returns the appropriate values", async () => {
   expect(response.status).toEqual(200);
   expect(data.status).toEqual(true);
   expect(rate.currency).toBe(currency);
-  expect(rate.buyRate).toBe(responseRate.bidPrice);
-  expect(rate.sellRate).toBe(responseRate.askPrice);
+  expect(rate.buyRate).toBe(responseRate?.bidPrice);
+  expect(rate.sellRate).toBe(responseRate?.askPrice);
 });
 
 test("Rate endpoint returns the appropriate values", async () => {
@@ -215,8 +215,8 @@ test("Rate endpoint returns the appropriate values", async () => {
   expect(response.status).toEqual(200);
   expect(data.status).toEqual(true);
   expect(rate.currency).toBe(currency);
-  expect(rate.buyRate).toBe(responseRate.bidPrice);
-  expect(rate.sellRate).toBe(responseRate.askPrice);
+  expect(rate.buyRate).toBe(responseRate?.bidPrice);
+  expect(rate.sellRate).toBe(responseRate?.askPrice);
 });
 
 test("Rate endpoint returns the appropriate values", async () => {
